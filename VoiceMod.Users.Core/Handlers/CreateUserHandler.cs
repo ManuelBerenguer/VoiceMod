@@ -21,9 +21,9 @@ namespace VoiceMod.Users.Core.Handlers
     public sealed class CreateUserHandler : ICommandHandler<CreateUser, UserDto>
     {
         private readonly IUsersRepository _usersRepository;
-        private readonly CheckEmailAvailability _checkEmailAvailability;
+        private readonly ICheckEmailAvailability _checkEmailAvailability;
 
-        public CreateUserHandler(IUsersRepository usersRepository, CheckEmailAvailability checkEmailAvailability)
+        public CreateUserHandler(IUsersRepository usersRepository, ICheckEmailAvailability checkEmailAvailability)
         {
             _usersRepository = usersRepository;
             _checkEmailAvailability = checkEmailAvailability;

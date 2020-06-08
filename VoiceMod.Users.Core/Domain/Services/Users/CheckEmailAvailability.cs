@@ -6,7 +6,7 @@ using VoiceMod.Users.Core.Repositories;
 
 namespace VoiceMod.Users.Core.Domain.Services.Users
 {
-    public class CheckEmailAvailability
+    public class CheckEmailAvailability : ICheckEmailAvailability
     {
         private readonly IUsersRepository _usersRepository;
 

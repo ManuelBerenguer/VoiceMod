@@ -62,6 +62,9 @@ namespace VoiceMod.Users.Api
             // We add all dependencies related to dispatchers
             services.AddDispatchers();
 
+            // Services
+            services.AddScoped<ICheckEmailAvailability, CheckEmailAvailability>();
+
             // Command Handlers
             services.AddScoped<ICommandHandler<CreateUser, UserDto>, CreateUserHandler>();
             services.AddScoped<ICommandHandler<UpdateUser, UserDto>, UpdateUserHandler>();

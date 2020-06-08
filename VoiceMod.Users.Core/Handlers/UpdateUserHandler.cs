@@ -19,9 +19,9 @@ namespace VoiceMod.Users.Core.Handlers
     public sealed class UpdateUserHandler : ICommandHandler<UpdateUser, UserDto>
     {
         private readonly IUsersRepository _usersRepository;
-        private readonly CheckEmailAvailability _checkEmailAvailability;
+        private readonly ICheckEmailAvailability _checkEmailAvailability;
 
-        public UpdateUserHandler(IUsersRepository usersRepository, CheckEmailAvailability checkEmailAvailability)
+        public UpdateUserHandler(IUsersRepository usersRepository, ICheckEmailAvailability checkEmailAvailability)
         {
             _usersRepository = usersRepository;
             _checkEmailAvailability = checkEmailAvailability;
